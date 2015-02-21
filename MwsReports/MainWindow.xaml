@@ -1,0 +1,312 @@
+﻿<Window x:Class="MwsReports.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TabControl>
+            <TabItem Header="RequestReport">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnRequestReport"
+                            Content="レポート作成"
+                            Width="120"
+                            Height="25"
+                            Margin="10 10 0 0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="btnRequestReport_Click"
+                            />
+                    <TextBlock x:Name="txtRequestReport"
+                               Width="250"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportRequestList">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportRequestList"
+                            Content="レポート一覧取得"
+                            Width="120"
+                            Height="25"
+                            Margin="10 10 0 0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="btnGetReportRequestList_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportRequestList"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportRequestListByNextToken">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportRequestListByNext"
+                            Content="次のレポート一覧取得"
+                            Width="120"
+                            Height="25"
+                            Margin="10 10 0 0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="btnGetReportRequestListByNext_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportRequestListByNextToken"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetRportRequestCount">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportRequestCount"
+                            Content="レポート件数取得"
+                            Width="120"
+                            Height="25"
+                            Margin="10 10 0 0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="btnGetReportRequestCount_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportRequestCount"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="CancelReportRequests">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="txtCancelReportRequestsSearch"
+                             Text="キャンセルレポートID"
+                             Height="25"
+                             Width="180"
+                             Margin="10 10 0 0"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"/>
+                    <Button x:Name="btnCancelReportRequests"
+                            Content="キャンセル処理"
+                            Width="120"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 50 0 0"
+                            Click="btnCancelReportRequests_Click"
+                            />
+                    <TextBlock x:Name="txtCancelReportRequests"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetRportList">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetRportList"
+                            Content="レポートリスト取得"
+                            Width="150"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetRportList_Click"
+                            />
+                    <TextBlock x:Name="txtGetRportList"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportListByNextToken">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportListByNextToken"
+                            Content="次のレポートリスト取得"
+                            Width="150"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetReportListByNextToken_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportListByNextToken"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportCount">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportCount"
+                            Content="レポート件数取得"
+                            Width="120"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetReportCount_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportCount"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReport">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="txtGetReportSearch"
+                             Text="取得レポートID"
+                             Height="25"
+                             Width="180"
+                             Margin="10 10 0 0"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"/>
+                    <Button x:Name="btnGetReport"
+                            Content="レポート取得"
+                            Width="120"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 50 0 0"
+                            Click="btnGetReport_Click"
+                            />
+                    <TextBlock x:Name="txtGetReport"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="ManageRportSchedule">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnManageRportSchedule"
+                            Content="スケジュール設定"
+                            Width="120"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnManageRportSchedule_Click"
+                            />
+                    <TextBlock x:Name="txtManageRportSchedule"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportScheduleList">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportScheduleList"
+                            Content="スケジュール管理リスト取得"
+                            Width="180"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetReportScheduleList_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportScheduleList"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportScheduleListByNextToken">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportScheduleListByNextToken"
+                            Content="次のスケジュール管理取得"
+                            Width="180"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetReportScheduleListByNextToken_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportScheduleListByNextToken"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="GetReportScheduleCount">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="btnGetReportScheduleCount"
+                            Content="スケジュール件数取得"
+                            Width="180"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 10 0 0"
+                            Click="btnGetReportScheduleCount_Click"
+                            />
+                    <TextBlock x:Name="txtGetReportScheduleCount"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+            <TabItem Header="UpdateReportAcknowledgements">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="txtUpdateReportAcknowledgementsSearch"
+                             Text="レポートID"
+                             Height="25"
+                             Width="120"
+                             Margin="10 10 0 0"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Top"/>
+                    <Button x:Name="btnUpdateReportAcknowledgements"
+                            Content="レポート更新処理"
+                            Width="120"
+                            Height="25"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="10 50 0 0"
+                            Click="btnUpdateReportAcknowledgements_Click"
+                            />
+                    <TextBlock x:Name="txtUpdateReportAcknowledgements"
+                               Width="300"
+                               Height="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="200 10 0 0"
+                               />
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+
+</Window>
