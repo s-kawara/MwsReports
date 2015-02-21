@@ -24,4 +24,4 @@ public static string strMWSAuthToken = "MWSAuthToken";
 public static string strServiceURL = "Service URL";
 ```
 ###Run Result
-![Screen Shot]()
+![Screen Shot](http://blog.activebrain.co.jp/wp-content/uploads/2015/02/image69.png)
